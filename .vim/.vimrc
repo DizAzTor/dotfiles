@@ -7,8 +7,8 @@ set backspace=start,indent,eol
 set t_Co=256
 colorscheme wombat256mod
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-set nocompatible               
-filetype off  
+set nocompatible
+filetype off
 filetype plugin indent on
 set laststatus=2
 set encoding=utf-8
@@ -54,8 +54,10 @@ augroup vimrc_autocmds
         autocmd FileType python set nowrap
 augroup END
 
-let g:pymode_rope = 1
-let g:pymode_doc = 1
+let g:pymode_rope = 0
+let g:pymode_doc = 0
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_complete_on_dot = 0
 let g:pymode_doc_key = 'K'
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
