@@ -1,4 +1,4 @@
-"""This script pretty much installs whatever you need for you, if you're lazy."""
+"""This script pretty much installs whatever you need for the .vimrc, if you're lazy."""
 
 import os
 import time
