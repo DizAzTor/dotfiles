@@ -1,4 +1,6 @@
 "Configuration
+set number
+"set relativenumber
 syntax on
 syntax enable
 set wrapscan
@@ -45,6 +47,13 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set showtabline=2
+set completeopt=longest,menuone
+set title
+set ruler
+set sb
+set ttyfast
+set lazyredraw
+
 
 augroup vimrc_autocmds
     autocmd!
@@ -101,4 +110,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'neomake/neomake'
+Plugin 'scrooloose/syntastic'
 call vundle#end()
