@@ -62,25 +62,25 @@ augroup vimrc_autocmds
         autocmd FileType python set nowrap
 augroup END
 
-"let g:pymode_rope = 0
-"let g:pymode_doc = 0
-"let g:pymode_rope_lookup_project = 0
-"let g:pymode_rope_complete_on_dot = 0
-"let g:pymode_rope_autoimport = 0
-"let g:pymode_doc_key = 'K'
-"let g:pymode_lint = 0
-"let g:pymode_lint_checker = "pyflakes,pep8"
-"let g:pymode_lint_write = 1
-"let g:pymode_virtualenv = 1
-"let g:pymode_breakpoint = 1
-"let g:pymode_breakpoint_key = '<leader>b'
-"let g:pymode_syntax = 1
-"let g:pymode_syntax_all = 1
-"let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-"let g:pymode_syntax_space_errors = g:pymode_syntax_all
-"let g:pymode_folding = 0
-"let python_highlight_all = 1
-"let g:Powerline_symbols = 'fancy'
+let g:pymode_rope = 0
+let g:pymode_doc = 0
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_autoimport = 0
+let g:pymode_doc_key = 'K'
+let g:pymode_lint = 0
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_write = 0
+let g:pymode_virtualenv = 0
+let g:pymode_breakpoint = 0
+let g:pymode_breakpoint_key = '<leader>b'
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+let g:pymode_folding = 0
+let python_highlight_all = 1
+let g:Powerline_symbols = 'fancy'
 
 " Mapping
 map <F2> :NERDTreeToggle<CR>
@@ -95,21 +95,20 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-
-"Plugin 'VundleVim/Vundle.vim'
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'Valloric/YouCompleteMe'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Plugin 'Lokaltog/vim-powerline'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 Plugin 'junegunn/goyo.vim'
-"Plugin 'itchyny/lightline.vim'
-"Plugin 'tomtom/tcomment_vim'
-"Plugin 'reedes/vim-colors-pencil'
-"Plugin 'dhruvasagar/vim-table-mode'
-"Plugin 'neomake/neomake'
-"Plugin 'scrooloose/syntastic'
+Plugin 'itchyny/lightline.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'reedes/vim-colors-pencil'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'neomake/neomake'
+Plugin 'scrooloose/syntastic'
+"Plugin 'OmniSharp/omnisharp-vim'
 call vundle#end()
