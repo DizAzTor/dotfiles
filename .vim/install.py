@@ -9,13 +9,12 @@ def install():
         time.sleep(0.4)
         os.system("echo \"lol\"")
     else:
-        os.system("wget https://raw.githubusercontent.com/sheerun/vimrc/master/colors/wombat256mod.vim")
+        os.system("wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim")
         os.system("git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim")
         os.system("echo \"Done! Copying stuff now...\"")
         os.system("cp .vimrc ~/.vimrc")
-        os.system("cp wombat256mod.vim ~/.vim/colors/")
+        os.system("cp molokai.vim ~/.vim/colors/")
         os.system("echo \"Cleaning up...\"")
-        os.system("rm -rf wombat256mod.vim")
-        os.system("echo \"Done!\"")
-
+        os.system("rm -rf molokai.vim")
+        os.system("echo \"Done! Google Vundle, to see how you can install it.\"")
 install()
