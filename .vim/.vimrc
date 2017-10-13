@@ -9,7 +9,9 @@ set backspace=start,indent,eol
 set t_Co=256
 let g:rehash256 = 1
 let g:molokai_original = 1
-colorscheme molokai
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 set nocompatible
 filetype off
@@ -104,7 +106,7 @@ nnoremap O Ox<BS>
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 
-" Vundle
+" Bloatundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -116,12 +118,32 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'klen/python-mode'
 Plugin 'c.vim'
+Plugin 'othree/yajs.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'neomake/neomake'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'wavded/vim-stylus'
+Plugin 'mattn/emmet-vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-sensible'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'ianks/vim-tsx'
+Plugin 'ryanoasis/vim-devicons'
+
+
 "Plugin 'scrooloose/syntastic'
 "Plugin 'OmniSharp/omnisharp-vim'
 call vundle#end()
