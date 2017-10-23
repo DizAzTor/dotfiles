@@ -8,10 +8,9 @@ set number
 set backspace=start,indent,eol
 set t_Co=256
 let g:rehash256 = 1
-let g:molokai_original = 1
-let g:solarized_termcolors=256
+let g:onedark_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme onedark
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 set nocompatible
 filetype off
@@ -56,6 +55,9 @@ set ruler
 set sb
 set ttyfast
 set lazyredraw
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
 au InsertEnter * silent execute "!echo -en \<esc>[5 q"
 au InsertLeave * silent execute "!echo -en \<esc>[2 q"
 
@@ -88,11 +90,13 @@ let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 let python_highlight_all = 0
-let g:Powerline_symbols = 'fancy'
 let g:C_UseTool_cmake = "yes"
 let g:C_UseTool_doxygen = "yes"
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 
 " Mapping
 map <F2> :NERDTreeToggle<CR>
@@ -114,7 +118,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'klen/python-mode'
 Plugin 'c.vim'
