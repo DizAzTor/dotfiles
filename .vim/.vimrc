@@ -50,16 +50,3 @@ set ttyfast
 set lazyredraw
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :TagbarToggle<CR>
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Townk/vim-autoclose'
-call vundle#end()
