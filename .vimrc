@@ -41,3 +41,9 @@ set title
 set sb
 set ttyfast
 set lazyredraw
+set clipboard=unnamedplus
+vmap <C-c> "py
+nmap <C-c> "pyiw
+vmap <C-p> "pp
+nmap <C-p> "pP
+imap <C-p> <Esc>"ppa
