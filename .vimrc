@@ -39,6 +39,7 @@ set showtabline=2
 set completeopt=longest,menuone
 set title
 set sb
+set paste
 set ttyfast
 set lazyredraw
 set clipboard=unnamedplus
@@ -47,3 +48,8 @@ nmap <C-c> "pyiw
 vmap <C-p> "pp
 nmap <C-p> "pP
 imap <C-p> <Esc>"ppa
+
+au InsertEnter * silent execute "!echo -en \<esc>[3 q"
+au InsertLeave * silent execute "!echo -en \<esc>[3 q"
+au VimEnter    * silent execute "!echo -en \<esc>[3 q"
+au VimLeave    * silent execute "!echo -en \<esc>[1 q"
