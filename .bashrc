@@ -117,5 +117,3 @@ stty -ixon
 alias plangfo='python3 -m plangfo'
 alias python="python3.5"
 # I use the normal vim, but this has +clipboard and +xterm_clipboard support, so yeah :/
-alias vim="vim.gtk3"
-alias xterm="xterm -fn -misc-fixed-bold-r-normal--15------iso8859-15 -fg gray"

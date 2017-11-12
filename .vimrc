@@ -1,5 +1,6 @@
 set number
 syntax on
+syntax enable
 set wrapscan
 set backspace=start,indent,eol
 set t_Co=256
@@ -49,7 +50,9 @@ vmap <C-p> "pp
 nmap <C-p> "pP
 imap <C-p> <Esc>"ppa
 
-au InsertEnter * silent execute "!echo -en \<esc>[3 q"
-au InsertLeave * silent execute "!echo -en \<esc>[3 q"
-au VimEnter    * silent execute "!echo -en \<esc>[3 q"
-au VimLeave    * silent execute "!echo -en \<esc>[1 q"
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'vim-airline/vim-airline'
+"call vundle#end()
+filetype plugin indent on
