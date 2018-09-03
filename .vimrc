@@ -4,6 +4,7 @@ syntax enable
 set wrapscan
 set backspace=start,indent,eol
 set t_Co=256
+set paste
 set nocompatible
 filetype off
 filetype plugin indent on
@@ -50,9 +51,44 @@ vmap <C-p> "pp
 nmap <C-p> "pP
 imap <C-p> <Esc>"ppa
 
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"Plugin 'VundleVim/Vundle.vim'
-"Plugin 'vim-airline/vim-airline'
-"call vundle#end()
 filetype plugin indent on
+
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'Vimjas/vim-python-pep8-indent'
+"Bundle 'Valloric/YouCompleteMe'
+call vundle#end()
+
+" Note: this works with VTE compatible terminals
+" That is: (urxvt, st, xterm, terminator, gnome-terminal 3.x and other more)
+" I use terminator and xterm. Sometimes st, it depends.
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+" Hide the status bar, copied from StackOverflow.
+let s:hidden_all = 0
+function! ToggleHiddenAll()
+    if s:hidden_all  == 0
+        let s:hidden_all = 1
+        set noshowmode
+        set noruler
+        set laststatus=0
+        set noshowcmd
+    else
+        let s:hidden_all = 0
+        set showmode
+        set ruler
+        set laststatus=2
+        set showcmd
+    endif
+endfunction
+
+nnoremap <S-h> :call ToggleHiddenAll()<CR>
+
