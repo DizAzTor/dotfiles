@@ -62,15 +62,19 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Vimjas/vim-python-pep8-indent'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'OmniSharp/omnisharp-vim'
+Bundle 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " Note: this works with VTE compatible terminals
 " That is: (urxvt, st, xterm, terminator, gnome-terminal 3.x and other more)
 " I use terminator and xterm. Sometimes st, it depends.
-let &t_SI = "\<Esc>[6 q"
+let &t_SI = "\<Esc>[5 q"
 let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
+let &t_EI = "\<Esc>[1 q"
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 " Hide the status bar, copied from StackOverflow.
 let s:hidden_all = 0
