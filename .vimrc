@@ -54,17 +54,16 @@ imap <C-p> <Esc>"ppa
 filetype plugin indent on
 
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Bundle 'OmniSharp/omnisharp-vim'
-Bundle 'Valloric/YouCompleteMe'
-call vundle#end()
+Plug 'VundleVim/Vundle.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'Valloric/YouCompleteMe'
+call plug#end()
 
 " Note: this works with VTE compatible terminals
 " That is: (urxvt, st, xterm, terminator, gnome-terminal 3.x and other more)
