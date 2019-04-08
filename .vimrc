@@ -4,6 +4,9 @@ syntax enable
 set wrapscan
 set backspace=start,indent,eol
 set t_Co=256
+set termguicolors
+set background=dark
+colorscheme kuroi
 set paste
 set nocompatible
 filetype off
